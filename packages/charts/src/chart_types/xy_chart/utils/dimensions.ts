@@ -13,6 +13,7 @@ import { AxisId } from '../../../utils/ids';
 import { Theme, AxisStyle } from '../../../utils/themes/theme';
 import { getAxesDimensions } from '../axes/axes_sizes';
 import { AxesTicksDimensions } from '../state/selectors/compute_axis_ticks_dimensions';
+import { ScaleConfigs } from '../state/selectors/get_api_scale_configs';
 
 /**
  * @internal
@@ -39,8 +40,9 @@ export interface ChartDimensions {
   axesStyles: Map<AxisId, AxisStyle | null>,
   axisSpecs: AxisSpec[],
   smSpec: SmallMultiplesSpec | null,
+  scaleConfigs: ScaleConfigs,
 ): ChartDimensions {
-  const axesDimensions = getAxesDimensions(theme, axisTickDimensions, axesStyles, axisSpecs, smSpec);
+  const axesDimensions = getAxesDimensions(theme, axisTickDimensions, axesStyles, axisSpecs, smSpec, scaleConfigs);
   const chartWidth = parentDimensions.width - axesDimensions.left - axesDimensions.right;
   const chartHeight = parentDimensions.height - axesDimensions.top - axesDimensions.bottom;
   const pad = theme.chartPaddings;
