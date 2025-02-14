@@ -6,8 +6,6 @@
  * Side Public License, v 1.
  */
 
-import React, { RefObject } from 'react';
-
 import { computeChartDimensionsSelector } from './selectors/compute_chart_dimensions';
 import { computeLegendSelector } from './selectors/compute_legend';
 import { computeSeriesDomainsSelector } from './selectors/compute_series_domains';
@@ -31,20 +29,13 @@ import { createOnProjectionAreaCaller } from './selectors/on_projection_area_cal
 import { ChartType } from '../..';
 import { LegendItemExtraValues } from '../../../common/legend';
 import { SeriesKey } from '../../../common/series_id';
-import { BrushTool } from '../../../components/brush/brush';
-import { Tooltip } from '../../../components/tooltip/tooltip';
-import { InternalChartState, GlobalChartState, BackwardRef } from '../../../state/chart_state';
+import type { GlobalChartState } from '../../../state/chart_state';
+import { InternalChartState } from '../../../state/internal_chart_state';
 import { getChartContainerDimensionsSelector } from '../../../state/selectors/get_chart_container_dimensions';
 import { InitStatus } from '../../../state/selectors/get_internal_is_intialized';
-import { EMPTY_LEGEND_ITEM_LIST } from '../../../state/selectors/get_legend_items_labels';
 import { isBrushingSelector } from '../../../state/selectors/is_brushing';
+import { EMPTY_LEGEND_ITEM_LIST } from '../../../state/selectors/shared';
 import { htmlIdGenerator } from '../../../utils/common';
-import { XYChart } from '../renderer/canvas/xy_chart';
-import { Annotations } from '../renderer/dom/annotations';
-import { CursorBand } from '../renderer/dom/cursor_band';
-import { CursorCrossLine } from '../renderer/dom/cursor_crossline';
-import { CursorLine } from '../renderer/dom/cursor_line';
-import { Highlighter } from '../renderer/dom/highlighter';
 
 /** @internal */
 export class XYAxisChartState implements InternalChartState {
@@ -113,21 +104,6 @@ export class XYAxisChartState implements InternalChartState {
 
   getLegendExtraValues(globalState: GlobalChartState): Map<SeriesKey, LegendItemExtraValues> {
     return getLegendItemExtraValuesSelector(globalState);
-  }
-
-  chartRenderer(containerRef: BackwardRef, forwardCanvasRef: RefObject<HTMLCanvasElement>) {
-    return (
-      <>
-        <CursorBand />
-        <XYChart forwardCanvasRef={forwardCanvasRef} />
-        <CursorLine />
-        <CursorCrossLine />
-        <Tooltip getChartContainerRef={containerRef} />
-        <Annotations getChartContainerRef={containerRef} chartAreaRef={forwardCanvasRef} />
-        <Highlighter />
-        <BrushTool />
-      </>
-    );
   }
 
   getPointerCursor(globalState: GlobalChartState) {

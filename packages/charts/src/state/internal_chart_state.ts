@@ -6,11 +6,12 @@
  * Side Public License, v 1.
  */
 
-import { CSSProperties, RefObject } from 'react';
+import { CSSProperties } from 'react';
 
-import { GlobalChartState } from './chart_state';
+import type { GlobalChartState } from './chart_state';
 import { InitStatus } from './selectors/get_internal_is_intialized';
-import { LegendItemLabel } from './selectors/get_legend_items_labels';
+import { LegendItemLabel } from './selectors/shared';
+import type { TooltipVisibility } from './tooltip_visibility';
 import { DebugState } from './types';
 import { ChartType } from '../chart_types';
 import { LegendItem, LegendItemExtraValues } from '../common/legend';
@@ -19,17 +20,6 @@ import { SeriesKey } from '../common/series_id';
 import { AnchorPosition } from '../components/portal/types';
 import { TooltipInfo } from '../components/tooltip/types';
 import { Dimensions } from '../utils/dimensions';
-
-/** @internal */
-export interface TooltipVisibility {
-  visible: boolean;
-  isExternal: boolean;
-  isPinnable: boolean;
-  displayOnly: boolean;
-}
-
-/** @internal */
-export type BackwardRef = () => RefObject<HTMLDivElement>;
 
 /**
  * A set of chart-type-dependant functions that required by all chart type
@@ -41,12 +31,6 @@ export interface InternalChartState {
    */
   chartType: ChartType;
   isInitialized(globalState: GlobalChartState): InitStatus;
-  /**
-   * Returns a JSX element with the chart rendered (lenged excluded)
-   * @param containerRef
-   * @param forwardStageRef
-   */
-  chartRenderer(containerRef: BackwardRef, forwardStageRef: RefObject<HTMLCanvasElement>): JSX.Element | null;
   /**
    * `true` if the brush is available for this chart type
    * @param globalState

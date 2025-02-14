@@ -17,7 +17,7 @@ import { SettingsSpec, GroupBySpec, SmallMultiplesSpec } from '../../../../specs
 import { updateParentDimensions } from '../../../../state/actions/chart_settings';
 import { onMouseDown, onMouseUp, onPointerMove } from '../../../../state/actions/mouse';
 import { upsertSpec, specParsed } from '../../../../state/actions/specs';
-import { createChartStore, GlobalChartState } from '../../../../state/chart_state';
+import { createChartStore, type GlobalChartState } from '../../../../state/chart_state';
 import { Datum } from '../../../../utils/common';
 import { HIERARCHY_ROOT_KEY, NULL_SMALL_MULTIPLES_KEY } from '../../layout/utils/group_by_rollup';
 import { PartitionSpec } from '../../specs';

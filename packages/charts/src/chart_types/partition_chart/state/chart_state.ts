@@ -6,8 +6,6 @@
  * Side Public License, v 1.
  */
 
-import { RefObject } from 'react';
-
 import { computeLegendSelector } from './selectors/compute_legend';
 import { getChartTypeDescriptionSelector } from './selectors/get_chart_type_description';
 import { getPointerCursorSelector } from './selectors/get_cursor_pointer';
@@ -21,12 +19,12 @@ import { getPartitionSpec } from './selectors/partition_spec';
 import { getTooltipInfoSelector } from './selectors/tooltip';
 import { ChartType } from '../..';
 import { EMPTY_LEGEND_ITEM_EXTRA_VALUES } from '../../../common/legend';
-import { BackwardRef, GlobalChartState, InternalChartState } from '../../../state/chart_state';
+import type { GlobalChartState } from '../../../state/chart_state';
+import { InternalChartState } from '../../../state/internal_chart_state';
 import { getActivePointerPosition } from '../../../state/selectors/get_active_pointer_position';
 import { InitStatus } from '../../../state/selectors/get_internal_is_intialized';
 import { DebugState } from '../../../state/types';
 import { Dimensions } from '../../../utils/dimensions';
-import { render } from '../renderer/dom/layered_partition_chart';
 
 /** @internal */
 export class PartitionState implements InternalChartState {
@@ -73,10 +71,6 @@ export class PartitionState implements InternalChartState {
 
   getLegendExtraValues() {
     return EMPTY_LEGEND_ITEM_EXTRA_VALUES;
-  }
-
-  chartRenderer(containerRef: BackwardRef, forwardStageRef: RefObject<HTMLCanvasElement>) {
-    return render(containerRef, forwardStageRef);
   }
 
   getPointerCursor(globalState: GlobalChartState) {

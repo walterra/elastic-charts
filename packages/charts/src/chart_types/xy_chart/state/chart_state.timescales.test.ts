@@ -21,7 +21,7 @@ import { SpecType } from '../../../specs/spec_type'; // kept as long-winded impo
 import { updateParentDimensions } from '../../../state/actions/chart_settings';
 import { onPointerMove } from '../../../state/actions/mouse';
 import { upsertSpec, specParsed } from '../../../state/actions/specs';
-import { createChartStore, GlobalChartState } from '../../../state/chart_state';
+import { createChartStore, type GlobalChartState } from '../../../state/chart_state';
 import { LIGHT_THEME } from '../../../utils/themes/light_theme';
 import { LineSeriesSpec, SeriesType } from '../utils/specs';
 
