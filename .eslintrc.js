@@ -28,6 +28,7 @@ module.exports = {
     'jsx-a11y',
     'prettier',
     'elastic-charts',
+    'barrel-files',
   ],
   rules: {
     /*
@@ -328,6 +329,14 @@ module.exports = {
       ],
       2,
     ],
+
+    /*
+     * eslint-plugin-barrel-files
+     */
+    'barrel-files/avoid-barrel-files': 2,
+    'barrel-files/avoid-importing-barrel-files': 2,
+    'barrel-files/avoid-namespace-import': 2,
+    'barrel-files/avoid-re-export-all': 2,
   },
   env: {
     es6: true,

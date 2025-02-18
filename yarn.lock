@@ -3159,6 +3159,28 @@
     uuid "^8.3.0"
     vfile "^4.2.1"
 
+"@emnapi/core@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@emnapi/core/-/core-1.3.1.tgz#9c62d185372d1bddc94682b87f376e03dfac3f16"
+  integrity sha512-pVGjBIt1Y6gg3EJN8jTcfpP/+uuRksIo055oE/OBkDNcjZqVbfkWCksG1Jp4yZnj3iKWyWX8fdG/j6UDYPbFog==
+  dependencies:
+    "@emnapi/wasi-threads" "1.0.1"
+    tslib "^2.4.0"
+
+"@emnapi/runtime@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@emnapi/runtime/-/runtime-1.3.1.tgz#0fcaa575afc31f455fd33534c19381cfce6c6f60"
+  integrity sha512-kEBmG8KyqtxJZv+ygbEim+KCGtIq1fC22Ms3S4ziXmYKm8uyoLX0MHONVKwp+9opg390VaKRNt4a7A9NwmpNhw==
+  dependencies:
+    tslib "^2.4.0"
+
+"@emnapi/wasi-threads@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@emnapi/wasi-threads/-/wasi-threads-1.0.1.tgz#d7ae71fd2166b1c916c6cd2d0df2ef565a2e1a5b"
+  integrity sha512-iIBu7mwkq4UQGeMEM8bLwNK962nXdhodeScX4slfQnRhEMMzvYivHhutCIk8uojvmASXXPC2WNEjwxFWk72Oqw==
+  dependencies:
+    tslib "^2.4.0"
+
 "@emotion/babel-plugin@^11.10.5":
   version "11.10.5"
   resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.10.5.tgz#65fa6e1790ddc9e23cc22658a4c5dea423c55c3c"
@@ -4704,6 +4726,15 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
+"@napi-rs/wasm-runtime@^0.2.4":
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/@napi-rs/wasm-runtime/-/wasm-runtime-0.2.6.tgz#d1413a709622e7d6cf8a5b42fae76609184de6c9"
+  integrity sha512-z8YVS3XszxFTO73iwvFDNpQIzdMmSDTP/mB3E/ucR37V3Sx57hSExcXyMoNwaucWxnsWf4xfbZv0iZ30jr0M4Q==
+  dependencies:
+    "@emnapi/core" "^1.3.1"
+    "@emnapi/runtime" "^1.3.1"
+    "@tybys/wasm-util" "^0.9.0"
+
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz#d4b3549a5db5de2683e0c1071ab4f140904bbf69"
@@ -5229,6 +5260,63 @@
   integrity sha512-aHm+olfIZjQpzoODpl+RCZzchKOrdSLJs+yfI7pMMcmB19Li6vidgx0DwUDO/Ic4Q3fq/lOjJORVCcLZefcrJw==
   dependencies:
     "@octokit/openapi-types" "^13.11.0"
+
+"@oxc-resolver/binding-darwin-arm64@1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@oxc-resolver/binding-darwin-arm64/-/binding-darwin-arm64-1.12.0.tgz#efa73e417e58f4c29b540a5b709543723614e3ef"
+  integrity sha512-wYe+dlF8npM7cwopOOxbdNjtmJp17e/xF5c0K2WooQXy5VOh74icydM33+Uh/SZDgwyum09/U1FVCX5GdeQk+A==
+
+"@oxc-resolver/binding-darwin-x64@1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@oxc-resolver/binding-darwin-x64/-/binding-darwin-x64-1.12.0.tgz#4c6fb861e43187a10e84416a18a9cf0a443fab63"
+  integrity sha512-FZxxp99om+SlvBr1cjzF8A3TjYcS0BInCqjUlM+2f9m9bPTR2Bng9Zq5Q09ZQyrKJjfGKqlOEHs3akuVOnrx3Q==
+
+"@oxc-resolver/binding-freebsd-x64@1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@oxc-resolver/binding-freebsd-x64/-/binding-freebsd-x64-1.12.0.tgz#83a8586f0cf767fb566b50b1bf20d186bbf59f25"
+  integrity sha512-BZi0iU6IEOnXGSkqt1OjTTkN9wfyaK6kTpQwL/axl8eCcNDc7wbv1vloHgILf7ozAY1TP75nsLYlASYI4B5kGA==
+
+"@oxc-resolver/binding-linux-arm-gnueabihf@1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@oxc-resolver/binding-linux-arm-gnueabihf/-/binding-linux-arm-gnueabihf-1.12.0.tgz#a1365e73432bfd25b6c37a77eb4b037ed978cfb3"
+  integrity sha512-L2qnMEnZAqxbG9b1J3di/w/THIm+1fMVfbbTMWIQNMMXdMeqqDN6ojnOLDtuP564rAh4TBFPdLyEfGhMz6ipNA==
+
+"@oxc-resolver/binding-linux-arm64-gnu@1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@oxc-resolver/binding-linux-arm64-gnu/-/binding-linux-arm64-gnu-1.12.0.tgz#6cbba2f1002c1d4f0df63c3942432a866b3e9f4f"
+  integrity sha512-otVbS4zeo3n71zgGLBYRTriDzc0zpruC0WI3ICwjpIk454cLwGV0yzh4jlGYWQJYJk0BRAmXFd3ooKIF+bKBHw==
+
+"@oxc-resolver/binding-linux-arm64-musl@1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@oxc-resolver/binding-linux-arm64-musl/-/binding-linux-arm64-musl-1.12.0.tgz#64640c9b574252650b0c4ef84d75fe359e7c2460"
+  integrity sha512-IStQDjIT7Lzmqg1i9wXvPL/NsYsxF24WqaQFS8b8rxra+z0VG7saBOsEnOaa4jcEY8MVpLYabFhTV+fSsA2vnA==
+
+"@oxc-resolver/binding-linux-x64-gnu@1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@oxc-resolver/binding-linux-x64-gnu/-/binding-linux-x64-gnu-1.12.0.tgz#0d76538cfd36e7ebfc9af8ff06b9cd742b09fe53"
+  integrity sha512-SipT7EVORz8pOQSFwemOm91TpSiBAGmOjG830/o+aLEsvQ4pEy223+SAnCfITh7+AahldYsJnVoIs519jmIlKQ==
+
+"@oxc-resolver/binding-linux-x64-musl@1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@oxc-resolver/binding-linux-x64-musl/-/binding-linux-x64-musl-1.12.0.tgz#5cc5f7dfd711a23c7301f8643aaa2e2700ba884f"
+  integrity sha512-mGh0XfUzKdn+WFaqPacziNraCWL5znkHRfQVxG9avGS9zb2KC/N1EBbPzFqutDwixGDP54r2gx4q54YCJEZ4iQ==
+
+"@oxc-resolver/binding-wasm32-wasi@1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@oxc-resolver/binding-wasm32-wasi/-/binding-wasm32-wasi-1.12.0.tgz#d99656021b92190ed43902431fdc5a3b88a2cd77"
+  integrity sha512-SZN6v7apKmQf/Vwiqb6e/s3Y2Oacw8uW8V2i1AlxtyaEFvnFE0UBn89zq6swEwE3OCajNWs0yPvgAXUMddYc7Q==
+  dependencies:
+    "@napi-rs/wasm-runtime" "^0.2.4"
+
+"@oxc-resolver/binding-win32-arm64-msvc@1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@oxc-resolver/binding-win32-arm64-msvc/-/binding-win32-arm64-msvc-1.12.0.tgz#65a65ccb7dabf2a8720527143e2352f43d57ad5b"
+  integrity sha512-GRe4bqCfFsyghruEn5bv47s9w3EWBdO2q72xCz5kpQ0LWbw+enPHtTjw3qX5PUcFYpKykM55FaO0hFDs1yzatw==
+
+"@oxc-resolver/binding-win32-x64-msvc@1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@oxc-resolver/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.12.0.tgz#4e9b68dda8481a6d7d3e249ebfddd2c39728e923"
+  integrity sha512-Z3llHH0jfJP4mlWq3DT7bK6qV+/vYe0+xzCgfc67+Tc/U3eYndujl880bexeGdGNPh87JeYznpZAOJ44N7QVVQ==
 
 "@parcel/watcher@2.0.4":
   version "2.0.4"
@@ -6454,6 +6542,13 @@
     minimatch "^3.0.4"
     mkdirp "^1.0.4"
     path-browserify "^1.0.1"
+
+"@tybys/wasm-util@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@tybys/wasm-util/-/wasm-util-0.9.0.tgz#3e75eb00604c8d6db470bf18c37b7d984a0e3355"
+  integrity sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==
+  dependencies:
+    tslib "^2.4.0"
 
 "@types/anymatch@*":
   version "1.3.1"
@@ -11826,6 +11921,90 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
+eslint-barrel-file-utils-android-arm-eabi@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils-android-arm-eabi/-/eslint-barrel-file-utils-android-arm-eabi-0.0.11.tgz#3705e79e0e87072e0e81f021c357774654a41719"
+  integrity sha512-zvq2HCBwKzW4ya/sxXjbbyC4l1jo3kHnKdDoarjEmhrfTR27PNDfB9YWDQsW/fkwOnwtdcfbR9B9i+Mkw8JO6Q==
+
+eslint-barrel-file-utils-android-arm64@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils-android-arm64/-/eslint-barrel-file-utils-android-arm64-0.0.11.tgz#8aa19b2bad0b43eb594d610cff738ebbfadb8d44"
+  integrity sha512-rpNW1lqpGgM2MJfCWD6oEL4sioRmrGhXrRV9tncSU9soK4+KKQ5yBfOsG6lQgHDkcVhLVGMocZf8Z1zeVZ7V/A==
+
+eslint-barrel-file-utils-darwin-arm64@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils-darwin-arm64/-/eslint-barrel-file-utils-darwin-arm64-0.0.11.tgz#faeab3c67317d544bf06fdade37402782c91acfd"
+  integrity sha512-U2Kyd7TQ9lpVTKPSLIsfujGQ66CVfIKBDVN71H+U2ub4x1WTiOcKBVmyqR+fEHrITHwJksyiucPo1nE1GCEPkg==
+
+eslint-barrel-file-utils-darwin-x64@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils-darwin-x64/-/eslint-barrel-file-utils-darwin-x64-0.0.11.tgz#29cff54e3edd1427dfc32c670005e4f54f3cd965"
+  integrity sha512-xvqwsJOQqHnYzP3P/3YYr2VjN4A114vR+i4Q/z8Zbd/DBgx4JWZWCdam01x16BbUvN05yRmB/eARWKUbGv1BbA==
+
+eslint-barrel-file-utils-freebsd-x64@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils-freebsd-x64/-/eslint-barrel-file-utils-freebsd-x64-0.0.11.tgz#c29254923f655bde51b8068cf4ce0f4e5abefee4"
+  integrity sha512-NOjL2ZG1RWsRYyiDJlA1YqfZ1JNjbSh9uxTrFOTc6X5MFvgali8JL5PciGk2fYOjYFKYu7vQCfVnqpdyrGBW0g==
+
+eslint-barrel-file-utils-linux-arm-gnueabihf@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils-linux-arm-gnueabihf/-/eslint-barrel-file-utils-linux-arm-gnueabihf-0.0.11.tgz#5c01169b84ab1c414d80c1e920211310fc5a3de4"
+  integrity sha512-4xzoigeh1U/GdZwqS8LDXtStW20njO6EkH4dy8jj3D0a5sG2o5cefteSa09sGuyIXiO8pyk5T+bjIE8tHnfqIw==
+
+eslint-barrel-file-utils-linux-arm64-gnu@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils-linux-arm64-gnu/-/eslint-barrel-file-utils-linux-arm64-gnu-0.0.11.tgz#84af3a93060e7436f45142ee2bd1c3e1f52289d4"
+  integrity sha512-8TG38orUFFUss8xMyT478x9BiEoBDm6OlqUzHF2Jgm6QLrTEOR+9aR+6fqWkOysNpiuf9LZigUemBM6e4RIw2A==
+
+eslint-barrel-file-utils-linux-arm64-musl@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils-linux-arm64-musl/-/eslint-barrel-file-utils-linux-arm64-musl-0.0.11.tgz#102d3157db34c7a32306ff97a2ce265d82ed728b"
+  integrity sha512-p3dftf3t+YzfVVsO7jbjdbZHluX+B1JijYZLssSSqJfS2rliNmaCW1vdU+V9gJVy+wjEPlVENpKYEDBWqUWG3w==
+
+eslint-barrel-file-utils-linux-x64-gnu@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils-linux-x64-gnu/-/eslint-barrel-file-utils-linux-x64-gnu-0.0.11.tgz#a809234c4954f0144f0f5899c9f61a60c38af3e0"
+  integrity sha512-Yhok34OIE2fXIwV8+2sRySwiD4i/XRFXLbTS9objm6zr5BKZzVUeGOiiNuggZthgOn+eyV6t2oQw8PDoipuEJA==
+
+eslint-barrel-file-utils-linux-x64-musl@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils-linux-x64-musl/-/eslint-barrel-file-utils-linux-x64-musl-0.0.11.tgz#f638412d6a459c231945779dc50986839ef565d9"
+  integrity sha512-wpRUbOjMex3E9uxkGCn1JGiGZECLYqzAr3jWBP1jsDbB3yf9ebpFTJSG1635PJnwh0ECIoPtQcgn+cAqQDQqpQ==
+
+eslint-barrel-file-utils-win32-arm64-msvc@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils-win32-arm64-msvc/-/eslint-barrel-file-utils-win32-arm64-msvc-0.0.11.tgz#22a5281e8a346238035b1192524ad4e91b30bf41"
+  integrity sha512-/bjKmAMIUrw6EoCiyQXp6CDNh9GUAKjprjDIeCkG5EPuxaHveriCwNm94PelE+9WrnjqSaChxzBBpiss8fUxpQ==
+
+eslint-barrel-file-utils-win32-ia32-msvc@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils-win32-ia32-msvc/-/eslint-barrel-file-utils-win32-ia32-msvc-0.0.11.tgz#3653953a8678bec62f3523de19842fcdac0b0f0e"
+  integrity sha512-4uZRNeOGKYE15vpC8WR4Q9BTKSzl3lPnx8jBHuv2fDIhG+4XyJ6eT00Pg98Ydkk1NTlNlyqYgkmhGXqEF1FX+w==
+
+eslint-barrel-file-utils-win32-x64-msvc@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils-win32-x64-msvc/-/eslint-barrel-file-utils-win32-x64-msvc-0.0.11.tgz#e6636ff24dbbf2f43580aa30e3e8048a134eb0d2"
+  integrity sha512-8F+UQZ52tX+yCLaq9fjFTDomP6ahrFsSVQzIRGUH1GSAIzw0B3+oEheEuYzNC9LIY7iizqTprgNTEjc6/KNGoQ==
+
+eslint-barrel-file-utils@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/eslint-barrel-file-utils/-/eslint-barrel-file-utils-0.0.11.tgz#92a5d1297dc2660bf598c4e341e65355b206eecf"
+  integrity sha512-KoCm6mI39DMAoznpFqOeTyKi0k/PRY5PwdHKpXSdw2FMeZSQjvsJpaKrwWJAYjneRUWX6LAxA1d/26ozFj+U+g==
+  optionalDependencies:
+    eslint-barrel-file-utils-android-arm-eabi "0.0.11"
+    eslint-barrel-file-utils-android-arm64 "0.0.11"
+    eslint-barrel-file-utils-darwin-arm64 "0.0.11"
+    eslint-barrel-file-utils-darwin-x64 "0.0.11"
+    eslint-barrel-file-utils-freebsd-x64 "0.0.11"
+    eslint-barrel-file-utils-linux-arm-gnueabihf "0.0.11"
+    eslint-barrel-file-utils-linux-arm64-gnu "0.0.11"
+    eslint-barrel-file-utils-linux-arm64-musl "0.0.11"
+    eslint-barrel-file-utils-linux-x64-gnu "0.0.11"
+    eslint-barrel-file-utils-linux-x64-musl "0.0.11"
+    eslint-barrel-file-utils-win32-arm64-msvc "0.0.11"
+    eslint-barrel-file-utils-win32-ia32-msvc "0.0.11"
+    eslint-barrel-file-utils-win32-x64-msvc "0.0.11"
+
 eslint-config-airbnb-base@^15.0.0:
   version "15.0.0"
   resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-15.0.0.tgz#6b09add90ac79c2f8d723a2580e07f3925afd236"
@@ -11873,8 +12052,18 @@ eslint-module-utils@^2.8.0:
   dependencies:
     debug "^3.2.7"
 
+eslint-plugin-barrel-files@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-barrel-files/-/eslint-plugin-barrel-files-2.1.1.tgz#7b8f0d4ee3c958abc12deda14973a602c87c7fcc"
+  integrity sha512-X41YRfKkVCooILai2N0aN0Q5O0imu+MbNt894QWU683A82xJJXIR01dEqxwYJ91M6IdExtyFB3GCOJb4eBMBMQ==
+  dependencies:
+    eslint-barrel-file-utils "^0.0.11"
+    oxc-resolver "^1.9.3"
+    requireindex "^1.2.0"
+
 "eslint-plugin-elastic-charts@link:./packages/eslint-plugin-elastic-charts":
-  version "1.0.0"
+  version "0.0.0"
+  uid ""
 
 eslint-plugin-eslint-comments@^3.2.0:
   version "3.2.0"
@@ -18603,6 +18792,23 @@ overlayscrollbars@^1.13.1:
   resolved "https://registry.yarnpkg.com/overlayscrollbars/-/overlayscrollbars-1.13.1.tgz#0b840a88737f43a946b9d87875a2f9e421d0338a"
   integrity sha512-gIQfzgGgu1wy80EB4/6DaJGHMEGmizq27xHIESrzXq0Y/J0Ay1P3DWk6tuVmEPIZH15zaBlxeEJOqdJKmowHCQ==
 
+oxc-resolver@^1.9.3:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/oxc-resolver/-/oxc-resolver-1.12.0.tgz#192aee832fd9a9a2a6e268b4e2e48b56ffeb2f80"
+  integrity sha512-YlaCIArvWNKCWZFRrMjhh2l5jK80eXnpYP+bhRc1J/7cW3TiyEY0ngJo73o/5n8hA3+4yLdTmXLNTQ3Ncz50LQ==
+  optionalDependencies:
+    "@oxc-resolver/binding-darwin-arm64" "1.12.0"
+    "@oxc-resolver/binding-darwin-x64" "1.12.0"
+    "@oxc-resolver/binding-freebsd-x64" "1.12.0"
+    "@oxc-resolver/binding-linux-arm-gnueabihf" "1.12.0"
+    "@oxc-resolver/binding-linux-arm64-gnu" "1.12.0"
+    "@oxc-resolver/binding-linux-arm64-musl" "1.12.0"
+    "@oxc-resolver/binding-linux-x64-gnu" "1.12.0"
+    "@oxc-resolver/binding-linux-x64-musl" "1.12.0"
+    "@oxc-resolver/binding-wasm32-wasi" "1.12.0"
+    "@oxc-resolver/binding-win32-arm64-msvc" "1.12.0"
+    "@oxc-resolver/binding-win32-x64-msvc" "1.12.0"
+
 p-all@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/p-all/-/p-all-2.1.0.tgz#91419be56b7dee8fe4c5db875d55e0da084244a0"
@@ -20800,6 +21006,11 @@ require-main-filename@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-2.0.0.tgz#d0b329ecc7cc0f61649f62215be69af54aa8989b"
   integrity sha512-NKN5kMDylKuldxYLSUfrbo5Tuzh4hd+2E8NPPX02mZtn1VuREQToYe/ZdlJy+J3uCpfaiGF05e7B8W0iXbQHmg==
+
+requireindex@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/requireindex/-/requireindex-1.2.0.tgz#3463cdb22ee151902635aa6c9535d4de9c2ef1ef"
+  integrity sha512-L9jEkOi3ASd9PYit2cwRfyppc9NoABujTP8/5gFcbERmo5jUoAKovIC3fsF17pkTnGsrByysqX+Kxd2OTNI1ww==
 
 requires-port@^1.0.0:
   version "1.0.0"
