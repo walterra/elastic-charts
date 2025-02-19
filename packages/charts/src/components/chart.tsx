@@ -19,6 +19,7 @@ import { ChartResizer } from './chart_resizer';
 import { ChartStatus } from './chart_status';
 import { Legend } from './legend/legend';
 import { getElementZIndex } from './portal/utils';
+import { chartTypeSelectors } from '../chart_types/chart_type_selectors';
 import { Colors } from '../common/colors';
 import { LegendPositionConfig, PointerEvent } from '../specs';
 import { SpecsParser } from '../specs/specs_parser';
@@ -27,7 +28,7 @@ import { onExternalPointerEvent } from '../state/actions/events';
 import { onComputedZIndex } from '../state/actions/z_index';
 import { createChartStore, type GlobalChartState } from '../state/chart_state';
 import { getChartContainerUpdateStateSelector } from '../state/selectors/chart_container_updates';
-import { getInternalChartStateSelector } from '../state/selectors/get_internal_chart_state';
+import { getInternalChartStateSelector, chartSelectorsRegistry } from '../state/selectors/get_internal_chart_state';
 import { getInternalIsInitializedSelector, InitStatus } from '../state/selectors/get_internal_is_intialized';
 import { ChartSize, getChartSize, getFixedChartSize } from '../utils/chart_size';
 import { LayoutDirection } from '../utils/common';
@@ -75,6 +76,10 @@ export class Chart extends React.Component<ChartProps, ChartState> {
     this.chartContainerRef = createRef();
     this.chartStageRef = createRef();
 
+    // set up the chart specific selector overrides
+    chartSelectorsRegistry.setChartSelectors(chartTypeSelectors);
+
+    // set up the redux store
     const id = props.id ?? uuidv4();
     this.chartStore = createChartStore(id, this.props.title, this.props.description);
     this.state = {
