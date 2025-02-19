@@ -329,14 +329,6 @@ module.exports = {
       ],
       2,
     ],
-
-    /*
-     * eslint-plugin-barrel-files
-     */
-    'barrel-files/avoid-barrel-files': 2,
-    'barrel-files/avoid-importing-barrel-files': 2,
-    'barrel-files/avoid-namespace-import': 2,
-    'barrel-files/avoid-re-export-all': 2,
   },
   env: {
     es6: true,
@@ -426,6 +418,13 @@ module.exports = {
             enforceForRenamedProperties: false,
           },
         ],
+        /*
+         * eslint-plugin-barrel-files
+         */
+        'barrel-files/avoid-barrel-files': 0,
+        'barrel-files/avoid-importing-barrel-files': 2,
+        'barrel-files/avoid-namespace-import': 0,
+        'barrel-files/avoid-re-export-all': 2,
       },
     },
     {
